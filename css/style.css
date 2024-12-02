@@ -1,0 +1,178 @@
+/* متغيرات الألوان */
+:root {
+     --bg-nav:#78aac7;
+    --main-bg-color: #b6c3a9; /* خلفية هادئة */
+    --main-text-color: #333333; /* نصوص غامقة */
+    --accent-color: #007BFF; /* لون بارز للأزرار والعناوين */
+    --secondary-color: #FF6F00; /* لون إضافي للأزرار عند التفاعل */
+    --border-color: #fff; /* لون الحدود */
+    --footer-bg-color: #333333; /* لون الفوتر */
+    --footer-text-color: #ffffff; /* نصوص الفوتر */
+
+
+--scroll-to-top:#007bff;
+}  
+
+/* إعدادات عامة */
+body {
+    margin: 0;  
+    color: var(--main-text-color);
+}
+/* تطبيق خط القاهرة على كامل الموقع */
+
+/* يمكن تخصيص الخط للعناوين فقط */
+
+
+/* النصوص العادية */
+
+/* الشريط العلوي */
+/* الشريط العلوي */
+nav {
+    background-color: var(--bg-nav); /* لون خلفية القائمة */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+
+nav .menu {
+    list-style: none;
+    display: flex; /* عرض أفقي في الوضع الطبيعي */
+    justify-content:center; 
+  
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu li {
+    display: inline;
+}
+
+nav .menu li a {
+    color: #ffffff; /* لون النصوص */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    background-color: #0056b3; /* تغيير لون الخلفية عند التمرير */
+    border-radius: 0px;
+}
+
+/* صورة البطلة */
+.hero-image {
+    text-align: center;
+    padding: 50px 20px;
+    background:url('../img/1.jpg') no-repeat center center / cover;
+    color: var(--footer-text-color);
+}
+   
+.hero-image h1 {
+    font-size: 2.5rem;
+    text-shadow:0 0 10px #222;  
+}
+
+/* قسم المطابخ */
+
+.kitchens-section {
+   padding:0 1rem;
+}
+.kitchens-section h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--accent-color);
+}
+
+.kitchens-section ul {
+ font-size:1.2rem 
+}
+.kitchens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /*  gap: 10px;
+    padding: 20px; */ 
+}
+
+.kitchens-grid img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--border-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kitchens-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* قسم التواصل */
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section li {
+    margin: 10px 0;
+}
+
+.contact-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+.google-map {
+
+  padding:0 2px; 
+}
+/* الفوتر */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 10px;
+}
+
+footer .scroll-to-top {
+    margin-top: 10px;
+    background-color: var(--accent-color);
+    color: var(--footer-text-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+footer .scroll-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+/* عرض الموبايل */
+@media (max-width: 768px) {
+    
+
+    nav ul.active {
+        display: flex;
+        background-color: var(--footer-bg-color);
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    nav .menu-btn {
+        display: block;
+    }
+}
+ 
